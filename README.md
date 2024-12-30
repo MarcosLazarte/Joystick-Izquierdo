@@ -1,0 +1,1 @@
+La página creada simula una tienda virtual donde comprar claves de juegos. En el futuro se pondra una sección de comentarios por cada juego y una página por cada juego.
