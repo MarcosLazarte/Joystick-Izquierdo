@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    overflow-x: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.edu-au-vic-wa-nt-pre-Titulos {
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+.resaltador{
+    font-weight: 700;
+}
+.cabeza{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: antiquewhite;
+    height: 10vw;
+}
+.titulo_principal{
+    text-align: center;
+    color: black;
+}
+.seccion{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.resena-izq{
+    display: grid;
+    grid-template-columns: 65% 5% 30%;
+    margin-bottom: 10px;
+}
+.resena-informacion{
+    border: solid 1px black;
+    padding: 10px;
+}
+.resena-der{
+    display: grid;
+    grid-template-columns: 30% 5% 65%;
+    margin-bottom: 10px;
+}
+.esqueleto-1-3-1{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    background: linear-gradient(rgb(253, 233, 193), pink);
+}
+.lado{
+    height: 1000px;
+}
+.curva{
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+}
+.curva::before{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: red;
+    transform: translate(85%, 60%);
+}
+.curva::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: green;
+    transform: translate(-4, 40%);
+    z-index: 1;
+}
+.contacto-form-enviar{
+    cursor: pointer;
+}
+.contacto-form-enviar:hover{
+    background-color: burlywood;
+    font-weight: 700;
+}
+.productos-cards{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.productos-cards-juegos{
+    width: 200px;
+    height: 250px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+.resenas-titulos{
+    font-family: 'Edu AU VIC WA NT Pre', cursive;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.contacto-form{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.animacion-entrada{
+    animation-duration: 1.5s;
+    animation-name: abrirTelon;
+}
+.animacion-entrada2{
+    animation-duration: 1s;
+    animation-name: abrirTelon;
+}
+.barra{
+    width: 80vw;
+    background-color: antiquewhite;
+    height: 3px;
+    margin: 30px 30px;
+}
+@keyframes abrirTelon {
+    from{
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        background-color: pink;
+    }
+    to{
+        position: absolute;
+        height: 100vh;
+        width: 0vw;
+        background-color: antiquewhite;
+        border-radius: 10%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .productos-cards{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contacto-form{
+        display: flex;
+        flex-direction: column;
+    }
+    .resena-izq{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .resena-der{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .resena-informacion{
+        border: solid 1px black;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
