@@ -123,36 +123,43 @@ function comprar() {
 function mostrarCarrito() {
   let urlParametros = new URLSearchParams(window.location.search); // Toma el parametro que se envio por url y lo utiliza para buscarlo en la base de datos
   let id = urlParametros.get("id");
-
-
   let carritoGuardado = JSON.parse(localStorage.getItem("carrito"));
   let comprasNumero = document.getElementById("compras");
   let numeroComprasTotales = 0;
 
 
+  if(!carritoGuardado){
+    carritoGuardado= [];
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    console.log("El carrito ha sido inicializado");
+  }
 
   for (let i = 0; i < carritoGuardado.length; i++) {
     numeroComprasTotales = carritoGuardado[i].cantidad + numeroComprasTotales;
   }
   comprasNumero.innerHTML = numeroComprasTotales;
 
-  console.log(id)
   if (id == null) {
     let compras = document.getElementById("comprasCarrito");
+    let valorTotal = document.getElementById("valorTotal");
+    let precioTotal = 0
+
     compras.innerHTML = "";
 
     carritoGuardado.forEach(compra => {
+      precioTotal = compra.cantidad * bd[compra.id].precio + precioTotal;
       const div = document.createElement('div');
       div.classList.add('card');
       div.style.width = '18rem';
       div.innerHTML = `
     <img src="${bd[compra.id].imagen}" class="card-img-top" alt="imagen de juego para comprar">
       <div class="card-body">
-      <p class="card-text">"${compra.id}"</p>
+      <p class="card-text">"${compra.cantidad}"</p>
     </div>
     `
       compras.appendChild(div);
     });
+    valorTotal.innerHTML = precioTotal;
   }
 }
 //bd[id].nombre
