@@ -9,8 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>El Joystick Izquierdo</title>
 </head>
+
 <body>
     <div class="animacion-entrada"></div>
     <div class="animacion-entrada2"></div>
@@ -26,27 +29,28 @@
     </header>
     <main class="esqueleto-1-3-1">
         <aside id="asideIzq" class="lado">
-            <h2>Costado1</h2>
+            <!--Espacio para publicidad o para ajustar la página según se necesite-->
         </aside>
         <section>
+            <a class="carrito">$ <span class="carritoCompras" id="compras">00</span> </a>
             <div class="seccion" id="productos">
                 <h2>Productos</h2>
                 <div class="productos-cards">
-                    <img class="productos-cards-juegos"
-                        src="https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1619987722169-VV6ZASHHZNRBJW9X0PLK/Key_Art_02_layeredjpg.jpg?format=1500w"
-                        alt="Hollow Knight">
-                    <img class="productos-cards-juegos"
-                        src="https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_OuterWildsEchoesoftheEye_MobiusDigital_Expansion_S1_2560x1440-1e8dd4dc3c0db902ff689686928633d2"
-                        alt="Outer Wilds">
-                    <img class="productos-cards-juegos"
-                        src="https://cdn1.epicgames.com/offer/0a9e3c5ab6684506bd624a849ca0cf39/EGS_DeathStrandingDirectorsCut_KOJIMAPRODUCTIONS_S3_2560x1440-fe4e51f1801fba36e452aa3466625789"
-                        alt="Death Stranding">
-                    <img class="productos-cards-juegos"
-                        src="https://cdn1.epicgames.com/offer/b5ac16dc12f3478e99dcfea07c13865c/EGS_DOOMEternal_idSoftware_S1_2560x1440-06b46993a4b6c19a9e614f2dd1202215"
-                        alt="Doom Eternal">
-                    <img class="productos-cards-juegos"
-                        src="https://cdn1.epicgames.com/spt-assets/709ac59000cd4eb99c3397e7c35b68f1/inscryption-offer-tjhc6.jpg"
-                        alt="Inscryption">
+                    <a href="juego.html?id=0"><img class="productos-cards-juegos"
+                            src="https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/1619987722169-VV6ZASHHZNRBJW9X0PLK/Key_Art_02_layeredjpg.jpg?format=1500w"
+                            alt="Hollow Knight"></a>
+                    <a href="juego.html?id=1"><img class="productos-cards-juegos"
+                            src="https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_OuterWildsEchoesoftheEye_MobiusDigital_Expansion_S1_2560x1440-1e8dd4dc3c0db902ff689686928633d2"
+                            alt="Outer Wilds"></a>
+                    <a href="juego.html?id=2"><img class="productos-cards-juegos"
+                            src="https://cdn1.epicgames.com/offer/0a9e3c5ab6684506bd624a849ca0cf39/EGS_DeathStrandingDirectorsCut_KOJIMAPRODUCTIONS_S3_2560x1440-fe4e51f1801fba36e452aa3466625789"
+                            alt="Death Stranding"></a>
+                    <a href="juego.html?id=3"><img class="productos-cards-juegos"
+                            src="https://cdn1.epicgames.com/offer/b5ac16dc12f3478e99dcfea07c13865c/EGS_DOOMEternal_idSoftware_S1_2560x1440-06b46993a4b6c19a9e614f2dd1202215"
+                            alt="Doom Eternal"></a>
+                    <a href="juego.html?id=4"><img class="productos-cards-juegos"
+                            src="https://cdn1.epicgames.com/spt-assets/709ac59000cd4eb99c3397e7c35b68f1/inscryption-offer-tjhc6.jpg"
+                            alt="Inscryption"></a>
                 </div>
             </div>
             <div class="seccion" id="resenas">
@@ -70,7 +74,6 @@
                         <p><span class="resaltador">Distribuidor: </span>Team Cherry</p>
                         <p><span class="resaltador">Lanzamiento: </span>24/2/2017</p>
                         <p><span class="resaltador">Plataformas: </span>
-                            <hr>
                             <hr> Nintendo Switch
                             <hr>
                             Microsoft Windows
@@ -203,7 +206,7 @@
                     <div class="resena-informacion">
                         <h3>Información General</h3>
                         <p><span class="resaltador">Desarrollador: </span>Daniel Mullins Games </p>
-                        <p><span class="resaltador">Distribuidor: </span>	Devolver Digital</p>
+                        <p><span class="resaltador">Distribuidor: </span> Devolver Digital</p>
                         <p><span class="resaltador">Lanzamiento: </span>19/10/2021</p>
                         <p><span class="resaltador">Plataformas: </span>
                             <hr>
@@ -212,25 +215,38 @@
                     </div>
                 </div>
             </div>
-            <div class="barra"></div>
-            <div class="seccion" class="contacto" id="contacto">
-                <h2>Contacto</h2>
-                <form name="formContacto" class="contacto-form" action="https://formspree.io/f/xnnqvrda" method="post" onsubmit="return validarForm()">
-                    <label for="formName">Nombre: </label>
-                    <input type="text" id="formName" name="formName" placeholder="Escribe aqui..."><br>
-                    <label for="formApellido">Apellido: </label>
-                    <input type="text" id="formApellido" name="formApellido" placeholder="Escribe aqui..."><br>
-                    <input class="contacto-form-enviar" type="submit" value="Enviar" id="form_enviar">
-                </form>
-            </div>
+            <div class="seccion" id="carritoSeccion">
+                <h2>Productos</h2>
+                <div>
+                    <div id="comprasCarrito">
 
+                    </div>
+                    <div>
+                        <button>Comprar</button>
+                        <button onclick="borrarCarrito()">Borrar carrito</button>
+                    </div>
+                </div>
+                <div class="seccion" class="contacto" id="contacto">
+                    <h2>Contacto</h2>
+                    <form name="formContacto" class="contacto-form" action="https://formspree.io/f/xnnqvrda"
+                        method="post" onsubmit="return validarForm()">
+
+                        <label for="formName">Nombre: </label><br>
+                        <input type="text" id="formName" name="formName" placeholder="Escribe aqui..."> <br>
+                        <label for="formApellido">Apellido: </label> <br>
+                        <input type="text" id="formApellido" name="formApellido" placeholder="Escribe aqui..."> <br>
+                        <input class="contacto-form-enviar" type="submit" value="Enviar" id="form_enviar">
+
+                    </form>
+                </div>
         </section>
         <aside class="lado">
-            <h2>Costado2</h2>
+            <!--Espacio para publicidad o para ajustar la página según se necesite-->
         </aside>
     </main>
     <footer class="pie">
-        <h2>Footer</h2>
+        <h2 class="googleFont">© Tienda de juegos</h2>
+        <h4 class="googleFont">Página creada con fines educativos</h4>
     </footer>
 
     <script src="main.js"></script>
