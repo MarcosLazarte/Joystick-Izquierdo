@@ -40,7 +40,7 @@
     position: fixed;
     font-size: 15px;
     display: flex;
-    
+
     justify-content: center;
     justify-items: center;
     
@@ -87,7 +87,19 @@
     text-align: center;
     color: black;
 }
-
+ul li{
+    float: left;
+    padding-left: 20px;
+}
+li a{
+    color: grey;
+    text-decoration: none;
+}
+li a:hover{
+    color: gray;
+    font-weight: 700;
+    text-decoration: none;
+}
 .seccion {
     margin-top: 30px;
     margin-bottom: 30px;

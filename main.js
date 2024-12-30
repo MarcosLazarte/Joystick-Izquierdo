@@ -154,12 +154,11 @@ function mostrarCarrito() {
       div.innerHTML = `
     <img src="${bd[compra.id].imagen}" class="card-img-top" alt="imagen de juego para comprar">
       <div class="card-body">
-      <p class="card-text">"${compra.cantidad}"</p>
+      <p class="card-text">Cantidad: "${compra.cantidad}"</p>
     </div>
     `
       compras.appendChild(div);
     });
-    valorTotal.innerHTML = precioTotal;
+    valorTotal.innerHTML = "Precio total: " + precioTotal;
   }
 }
-//bd[id].nombre
